@@ -30,7 +30,7 @@ export default function CompletePage() {
   }
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center bg-slate-950 p-4 overflow-hidden animate-page-entry">
+    <main className="relative flex min-h-screen items-center justify-center bg-slate-950 p-4 overflow-x-hidden animate-page-entry">
       {/* Background Animated Blobs */}
       <div className="absolute top-1/4 left-1/4 h-[35rem] w-[35rem] rounded-full bg-blue-600/10 blur-[130px] animate-float-slow pointer-events-none"></div>
       <div className="absolute bottom-1/4 right-1/4 h-[40rem] w-[40rem] rounded-full bg-sky-500/10 blur-[150px] animate-float-medium pointer-events-none"></div>

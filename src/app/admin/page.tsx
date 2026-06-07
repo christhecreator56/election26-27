@@ -31,7 +31,13 @@ export default function AdminPage() {
   }, []);
 
   useEffect(() => {
-    if (loggedIn) loadResults();
+    if (!loggedIn) return;
+
+    loadResults(); // Initial fetch
+
+    const intervalId = setInterval(loadResults, 3000); // Poll every 3 seconds
+
+    return () => clearInterval(intervalId);
   }, [loggedIn]);
 
   async function loadResults() {

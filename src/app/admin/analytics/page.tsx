@@ -213,17 +213,26 @@ export default function AnalyticsPage() {
   const [sectionFilter, setSectionFilter] = useState("all");
 
   useEffect(() => {
-    async function init() {
-      const res = await fetch("/api/admin/analytics");
-      if (!res.ok) {
-        router.replace("/admin");
-        return;
+    async function fetchAnalytics() {
+      try {
+        const res = await fetch("/api/admin/analytics");
+        if (!res.ok) {
+          router.replace("/admin");
+          return;
+        }
+        const raw = await res.json();
+        setData(raw);
+        setLoading(false);
+      } catch (err) {
+        console.error("Error fetching turnout analytics:", err);
       }
-      const raw = await res.json();
-      setData(raw);
-      setLoading(false);
     }
-    init();
+
+    fetchAnalytics(); // Initial fetch
+
+    const intervalId = setInterval(fetchAnalytics, 3000); // Poll every 3 seconds
+
+    return () => clearInterval(intervalId);
   }, [router]);
 
   // Compute unique filter lists from data
