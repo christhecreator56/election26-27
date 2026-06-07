@@ -428,6 +428,12 @@
 }
 
 @media (max-width: 768px) {
+  .pc-card-wrapper {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .pc-details {
     top: 2em;
   }
@@ -469,6 +475,12 @@
 }
 
 @media (max-width: 480px) {
+  .pc-card-wrapper {
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .pc-details {
     top: 1.5em;
   }

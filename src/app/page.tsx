@@ -80,7 +80,7 @@ export default function LoginPage() {
         <circle cx="50" cy="50" r="45" stroke="currentColor" strokeWidth="0.6" strokeDasharray="8 6 4 6" fill="none" />
       </svg>
 
-      <div className="relative w-full max-w-md glass-panel glass-panel-glow rounded-3xl p-8 sm:p-10 shadow-2xl transition-all duration-500 hover:border-blue-500/30">
+      <div className="relative w-full max-w-md glass-panel glass-panel-glow rounded-3xl p-6 sm:p-10 shadow-2xl transition-all duration-500 hover:border-blue-500/30">
         {/* Decorative Internal Card SVG Lines */}
         <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden pointer-events-none rounded-tr-3xl">
           <svg className="absolute top-[-10px] right-[-10px] w-20 h-20 text-blue-500/10" viewBox="0 0 100 100">
