@@ -1,0 +1,1 @@
+-- See applied migration via Supabase MCP (001_election_schema)
