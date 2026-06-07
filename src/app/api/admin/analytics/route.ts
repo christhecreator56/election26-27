@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createSupabaseClient } from "@/lib/supabase";
+import { createSupabaseServiceClient } from "@/lib/supabase";
 import { getAdminSession } from "@/lib/session";
 
 export async function GET() {
@@ -8,7 +8,7 @@ export async function GET() {
     return NextResponse.json({ ok: false }, { status: 401 });
   }
 
-  const supabase = createSupabaseClient();
+  const supabase = createSupabaseServiceClient();
   
   // Fetch class, section and voting status for all students
   const { data: students, error } = await supabase
